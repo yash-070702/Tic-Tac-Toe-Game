@@ -1,0 +1,216 @@
+*{
+    padding:0%;
+    margin:0%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.wrapper{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('./images/tic-tac.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    place-items: center;
+}
+.game-info{
+    color:white;
+    position:absolute;
+    top:2rem;
+    display: none;
+    left:50%;
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateX(-50%);
+    border-radius: 1rem ;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding:0.5rem 3rem;
+    text-align:center;
+}
+.game-info.active{
+    display: block;
+}
+@media(max-width:480px)
+{
+    .game-info{  
+    font-size: 0.9rem;
+    padding:0.3rem 0.9rem;
+    border-radius: 0.6rem ;
+    }
+}
+.tic-tac-toe{
+    width:80%;
+    max-width:20rem;
+    transform: translateY(25%);
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 1rem ;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding:2rem;
+    display:none;
+    grid-template-columns: repeat(3,1fr);
+    aspect-ratio: 1/1;
+
+}
+.tic-tac-toe.active{
+    display: grid;
+}
+
+.box{
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1/1;
+    color:aliceblue;
+    cursor: pointer;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media(max-width:350px)
+{
+    .box{
+font-size: 2rem;
+
+    }
+}
+.box1, .box2, .box4 ,.box5{
+    border-right:2px solid aliceblue ;
+    border-bottom:2px solid aliceblue  ;
+}
+.box3,.box6{
+    border-bottom:2px solid aliceblue  ;
+}
+.box7,.box8{
+    border-right:2px solid aliceblue ; 
+}
+
+.btn{
+    color:white;
+    position:absolute;
+    bottom:5rem;
+    left:50%;
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateX(-50%);
+    border-radius: 1rem ;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding:0.5rem 3rem;
+    text-align:center;
+    cursor: pointer;
+    display: none; 
+}
+.btn1{
+    color:white;
+    position:absolute;
+    bottom:3rem;
+    left:50%;
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateX(-50%);
+    border-radius: 1rem ;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    padding:0.5rem 3rem;
+    text-align:center;
+    cursor: pointer;
+   
+}
+
+.btn.active{
+    display: block;
+} 
+
+@media(max-width:480px)
+{
+    .btn{  
+    font-size: 0.9rem;
+    padding:0.3rem 0.9rem;
+    border-radius: 0.5rem ;
+    }
+}
+.win{
+    background-color: rgba(0, 255, 0, 0.3);
+}
+.form-container{
+    margin: 0 auto;
+    display: none; 
+    justify-content: space-between;
+    align-self: center;
+    gap: 0 10px;
+    padding: 15px;
+    margin-bottom: 3rem;
+    }
+   
+
+    .form-container input{
+        all:unset;
+        width:calc(100% - 80px);
+        height: 40px;
+        padding: 0 20px;
+        background-color: rgba(219, 226, 239, 0.5);
+        border-radius: 10px;
+    color: black;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: capitalize;
+    }
+    
+    .form-container input::placeholder{
+        color:rgba(255, 255, 255, 0.822);
+    }
+    
+    .form-container input:focus{
+        outline: 3px solid rgba(255,255,255,0.7);
+    }
+    
+    .form-container .btn1{
+       all:unset;
+        padding: unset;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0%;
+    }
+    .question{
+        color: aliceblue;
+        display:none ;
+        margin: 0 auto; 
+        align-self: center;
+        
+    }
+  .active{
+    display:flex ;
+    }
+    .active1{
+        display: block;
+    }
+    @media(max-width:500px)
+    {
+        .question{
+            font-size: larger;
+            margin: 0 auto; 
+        }
+       
+    }
+
+    .footer {
+        text-align: center;
+        padding: 5px;
+        margin-top: 50px;
+     position: absolute;
+     width: 100%;
+     bottom: 0%;
+        background-color: rgba(0, 0, 0, 0.525);
+    }
+    
+    .footer p {
+        margin: 0;
+        font-size: 20px;
+        color: #ffffff;
+    }
+    
+    @media(max-width:500px)
+    {
+        .footer p {
+          font-size:1rem ;
+        }
+    }
