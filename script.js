@@ -56,21 +56,27 @@ searchInput.value="";
         let choice=searchInput.value;
     
         if(choice==="")
-        return;
-    else
-    {
-        if(choice==="X" || choice==="x")
-    {
-        currentPlayer="X";
+         return; 
+
+        else if(choice==="X" || choice==="x")
+        {
+            currentPlayer="X";
+            initGame();
+        }
+         
         
-    }
+        else if(choice==="o" || choice==="O")
+        {
+            currentPlayer="O";
+            initGame();
+        }
+        
+         else
+         return;
+        
+
+
     
-    else {
-    currentPlayer="O";
-    
-    }
-    initGame();
-    }
     
         
       
